@@ -24,7 +24,7 @@ routerApi(app);
 const port = process.env.PORT || 4000;
 
 app.get('/api/v1',(req, res)=>{
-    res.status(200).send('API de peliculas');
+    res.status(200).send('API de peliculas 📽️');
 })
 
 app.get('/*',(req, res)=>{
