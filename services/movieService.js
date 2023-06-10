@@ -1,7 +1,8 @@
+require('dotenv').config();
 const express = require('express');
 const { MongoClient, ObjectId } = require('mongodb'); //ObjectId: Para poder trabajar con id
 const bodyparser = require('body-parser');
-require('dotenv').config();
+
 
 const uri = process.env.URI;
 

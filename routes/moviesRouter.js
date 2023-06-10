@@ -1,8 +1,10 @@
+require('dotenv').config();
 const express = require('express');
 const { MongoClient, ObjectId } = require('mongodb'); //ObjectId: Para poder trabajar con id
 const bodyparser = require('body-parser');
 const movieService = require('../services/movieService');
-const uri = "mongodb+srv://el-profe1:el-profe1@cluster0.gdzt1ar.mongodb.net/?retryWrites=true&w=majority";
+
+const uri = process.env.URI;
 
 const router = express.Router();
 
