@@ -19,7 +19,8 @@ router.get('/', async (req, res)=>{
     const { limit, offset } = req.query;
     const movies =await service.find(limit, offset);
     if(movies){
-        res.status(200).send(movies);
+        // res.status(200).send(movies);
+        res.render('index.ejs', {movies});
     }else{
         res.status(404).send("No se encontro la informacion");
     }

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>ejemploEJS</title>
+</head>
+<body>
+    <h1>Peliculas Mflix</h1>
+    <% movies.forEach(movie => { %>
+    <div class="responsive">
+        <div class="gallery">
+            <h4><%= movie.title %></h4>
+            <img src=<%= movie.poster %> alt="<%= movie.title %>" width="200">
+          <div class="desc"><%= movie.plot %></div>
+        </div>
+      </div>
+      <% }); %>
+</body>
+</html>
